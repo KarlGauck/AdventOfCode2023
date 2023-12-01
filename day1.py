@@ -44,5 +44,8 @@ for l in lines:
     print(val)
     sum += val
 
-error = 4
+def calc_error(e):
+    return e**2
+
+error = calc_error(2)
 print(sum-error)
