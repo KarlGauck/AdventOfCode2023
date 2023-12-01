@@ -1,4 +1,5 @@
 import re
+import os
 
 sum = 0
 nums = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
@@ -44,5 +45,14 @@ for l in lines:
     print(val)
     sum += val
 
-error = 4
+def calc_error(e):
+    return e**2
+
+def clone_repo():
+    os.system("clone-repo.bat")
+
+clone_repo()
+correct = int(open("aoc2023/src/correct.txt", "r").readlines()[0])
+
+error = sum - correct
 print(sum-error)
